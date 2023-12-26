@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:twister/Designs/themes.dart';
+//import 'package:google_nav_bar/google_nav_bar.dart';
+//import 'package:twister/Designs/themes.dart';
 import 'package:twister/Pages/homepage.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class _MainState extends State<Main> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Twister',
-      theme: darkMode,
+      theme: ThemeData(),
       home: const HomePage(),
     );
   }
