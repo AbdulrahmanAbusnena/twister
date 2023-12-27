@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 
+// ignore: must_be_immutable
 class NavBar extends StatelessWidget {
   void Function(int)? onTabChange;
   NavBar({super.key, required this.onTabChange});
@@ -10,7 +11,7 @@ class NavBar extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(bottom: 8.0),
       child: GNav(
-        onTabChange: (value) => onTabChange,
+        onTabChange: (value) => onTabChange!(value),
         mainAxisAlignment: MainAxisAlignment.center,
         activeColor: Colors.white,
         color: Colors.blueGrey[300],

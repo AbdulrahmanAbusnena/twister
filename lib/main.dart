@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 //import 'package:google_nav_bar/google_nav_bar.dart';
 //import 'package:twister/Designs/themes.dart';
 import 'package:twister/Pages/homepage.dart';
+import 'package:twister/Pages/registration.dart';
 
 void main() {
   runApp(const Main());
@@ -21,7 +22,7 @@ class _MainState extends State<Main> {
       debugShowCheckedModeBanner: false,
       title: 'Twister',
       theme: ThemeData(),
-      home: const HomePage(),
+      home: const RegistrationView(),
     );
   }
 }

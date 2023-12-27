@@ -7,7 +7,7 @@ class CartPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+      /* appBar: AppBar(
         title: Text('Cart',
             style: GoogleFonts.montserrat(
               fontSize: 14,
@@ -17,6 +17,8 @@ class CartPage extends StatelessWidget {
         centerTitle: true,
         elevation: 0.0,
       ),
+      */
+      body: Center(child: Text('cart')),
     );
   }
 }

@@ -12,7 +12,7 @@ class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
+        /*  appBar: AppBar(
         title: Text(
           "Shop",
           style: GoogleFonts.montserrat(
@@ -24,6 +24,9 @@ class _ShopPageState extends State<ShopPage> {
         centerTitle: true,
         elevation: 0.0,
       ),
-    );
+      */
+        body: Center(
+      child: Text('shop '),
+    ));
   }
 }

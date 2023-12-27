@@ -21,7 +21,7 @@ class _HomePageState extends State<HomePage> {
     });
   }
 
-  final List _page = [
+  final List<Widget> _pages = [
     // shop page
     const ShopPage(),
     // cart page
@@ -30,30 +30,11 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.brown[400],
-      appBar: AppBar(
-        backgroundColor: Colors.brown[400],
-        title: Text(
-          'Twister',
-          style: GoogleFonts.montserrat(
-            color: Colors.white54,
-            fontSize: 23,
-            fontWeight: FontWeight.w900,
-          ),
+        //  backgroundColor: Colors.brown[400],
+
+        bottomNavigationBar: NavBar(
+          onTabChange: (index) => navigateBottomBar(index),
         ),
-        centerTitle: true,
-        leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/abdul.png'),
-        ),
-        actions: [
-          IconButton(onPressed: () {}, icon: const Icon(Icons.search)),
-          IconButton(onPressed: () {}, icon: const Icon(Icons.notifications)),
-        ],
-        elevation: 0.0,
-      ),
-      bottomNavigationBar: NavBar(
-        onTabChange: (index) => navigateBottomBar(index),
-      ),
-    );
+        body: _pages[_selectedIndex]);
   }
 }
