@@ -30,27 +30,30 @@ class _RegistrationViewState extends State<RegistrationView> {
         ),
         elevation: 0.0,
       ),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.end,
-        children: [
-          TextButton(
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const HomePage()));
-            },
-            child: const Text(
-              'Enter',
+      body: Container(
+        child: Row(
+          //mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            TextButton(
+              onPressed: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => const HomePage()));
+              },
+              child: const Text(
+                'Enter',
+              ),
             ),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            child: const Text(
-              'Exit',
+            TextButton(
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: const Text(
+                'Exit',
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
