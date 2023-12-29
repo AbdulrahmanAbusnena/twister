@@ -31,8 +31,9 @@ class _RegistrationViewState extends State<RegistrationView> {
         elevation: 0.0,
       ),
       body: Container(
-        child: Row(
-          //mainAxisAlignment: MainAxisAlignment.center,
+        alignment: Alignment.bottomCenter,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             TextButton(
@@ -48,8 +49,12 @@ class _RegistrationViewState extends State<RegistrationView> {
               onPressed: () {
                 Navigator.pop(context);
               },
-              child: const Text(
+              child: Text(
                 'Exit',
+                style: GoogleFonts.montserrat(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w400,
+                ),
               ),
             ),
           ],
