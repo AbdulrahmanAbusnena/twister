@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:twister/Designs/themes.dart';
 import 'package:twister/Pages/homepage.dart';
 
 class RegistrationView extends StatefulWidget {
@@ -21,7 +22,7 @@ class _RegistrationViewState extends State<RegistrationView> {
           style: GoogleFonts.montserrat(
             color: Colors.white54,
             fontSize: 23,
-            fontWeight: FontWeight.w900,
+            fontWeight: FontWeight.bold,
           ),
         ),
         centerTitle: true,
@@ -31,12 +32,13 @@ class _RegistrationViewState extends State<RegistrationView> {
         elevation: 0.0,
       ),
       body: Container(
-        alignment: Alignment.bottomCenter,
+        alignment: const Alignment(0, 0.5),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            TextButton(
+            ElevatedButton(
+              style: buttonTheme,
               onPressed: () {
                 Navigator.push(context,
                     MaterialPageRoute(builder: (context) => const HomePage()));
@@ -45,7 +47,11 @@ class _RegistrationViewState extends State<RegistrationView> {
                 'Enter',
               ),
             ),
+            const SizedBox(
+              height: 30,
+            ),
             TextButton(
+              style: buttonTheme2,
               onPressed: () {
                 Navigator.pop(context);
               },

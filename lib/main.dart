@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 //import 'package:google_nav_bar/google_nav_bar.dart';
 //import 'package:twister/Designs/themes.dart';
-import 'package:twister/Pages/homepage.dart';
 import 'package:twister/Pages/registration.dart';
 
 void main() {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:twister/Pages/cartpage.dart';
 import 'package:twister/Pages/shopage.dart';
 //import 'package:twister/Designs/themes.dart';
