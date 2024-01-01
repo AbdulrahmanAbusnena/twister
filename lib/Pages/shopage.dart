@@ -12,21 +12,19 @@ class _ShopPageState extends State<ShopPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          backgroundColor: Colors.brown[400],
-          title: Text(
-            "Shop",
-            style: GoogleFonts.montserrat(
-              fontSize: 14,
-              fontWeight: FontWeight.w900,
-              color: Colors.white54,
-            ),
+      appBar: AppBar(
+        backgroundColor: Colors.brown[400],
+        title: Text(
+          "Shop",
+          style: GoogleFonts.montserrat(
+            fontSize: 14,
+            fontWeight: FontWeight.w900,
+            color: Colors.white54,
           ),
-          centerTitle: true,
-          elevation: 0.0,
         ),
-        body: const Center(
-          child: Text('shop '),
-        ));
+        centerTitle: true,
+        elevation: 0.0,
+      ),
+    );
   }
 }
