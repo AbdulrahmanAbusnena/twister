@@ -1,6 +1,7 @@
+import 'package:flutter/material.dart';
 import 'package:twister/modules/drinks.dart';
 
-class CoffeShop {
+class CoffeShop extends ChangeNotifier {
 // list of drinks for sale
   final List<Drinks> _shop = [
     Drinks(name: 'Caffe latte', price: '2', imagepath: 'assets/coffe3.jpg'),
@@ -14,10 +15,12 @@ class CoffeShop {
   // add drink to cart
   void addDrinktoCart(Drinks drink) {
     _usercart.add(drink);
+    notifyListeners();
   }
 
   // remove drink from cart
   void removeDrinkfromCart(Drinks drink) {
     _usercart.remove(drink);
+    notifyListeners();
   }
 }

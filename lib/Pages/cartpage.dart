@@ -9,11 +9,12 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.brown[400],
       appBar: AppBar(
+        backgroundColor: Colors.brown[400],
         title: Text('Cart',
             style: GoogleFonts.montserrat(
               fontSize: 14,
               fontWeight: FontWeight.w900,
-              color: Colors.white70,
+              color: Colors.white54,
             )),
         centerTitle: true,
         elevation: 0.0,

@@ -37,6 +37,14 @@ class _RegistrationViewState extends State<RegistrationView> {
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
+            Image.asset(
+              'assets/coffe2.jpg',
+              height: 100,
+              width: 100,
+            ),
+            SizedBox(
+              height: 50,
+            ),
             ElevatedButton(
               style: buttonTheme,
               onPressed: () {
