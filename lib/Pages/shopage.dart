@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
 
 // what is the best keyboad to buy this two years I swear I can't
@@ -37,12 +38,7 @@ class _ShopPageState extends State<ShopPage> {
             child: ListView.builder(
               itemCount: value.shop.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(
-                    value.shop[index].name,
-                  ),
-                  subtitle: Text(value.shop[index].price),
-                );
+                Drinks individualDrink = value.shop[index];
               },
             ),
           ),

@@ -18,6 +18,8 @@ class NavBar extends StatelessWidget {
       tabActiveBorder: Border.all(color: Colors.white54, width: 2),
       //  gap: 8,
       backgroundColor: Color.fromARGB(255, 141, 110, 99),
+      iconSize: 25,
+
       tabs: const [
         // Home
         GButton(

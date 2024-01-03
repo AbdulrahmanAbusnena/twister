@@ -9,17 +9,26 @@ class CartPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.brown[400],
       appBar: AppBar(
-        backgroundColor: Colors.brown[400],
-        title: Text('Cart',
-            style: GoogleFonts.montserrat(
-              fontSize: 14,
-              fontWeight: FontWeight.w900,
-              color: Colors.white54,
-            )),
+        title: Text(
+          'Cart',
+          style: GoogleFonts.montserrat(
+            fontSize: 25,
+            fontWeight: FontWeight.w900,
+            color: Colors.white54,
+          ),
+        ),
         centerTitle: true,
-        elevation: 0.0,
+        backgroundColor: Colors.brown[400],
+        elevation: 0,
       ),
-      body: Center(child: Text('cart')),
+      body: Expanded(
+        child: ListView.builder(
+            itemCount: 2,
+            itemBuilder: (context, index) => Padding(
+                  padding: EdgeInsets.all(0),
+                  child: Text('ListView Hahaha'),
+                )),
+      ),
     );
   }
 }

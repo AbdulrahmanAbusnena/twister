@@ -13,65 +13,69 @@ class RegistrationView extends StatefulWidget {
 class _RegistrationViewState extends State<RegistrationView> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Colors.brown[400],
-      appBar: AppBar(
+    return SafeArea(
+      child: Scaffold(
         backgroundColor: Colors.brown[400],
-        title: Text(
-          'Twister',
-          style: GoogleFonts.montserrat(
-            color: Colors.white54,
-            fontSize: 23,
-            fontWeight: FontWeight.bold,
+        appBar: AppBar(
+          backgroundColor: Colors.brown[400],
+          title: Text(
+            'Twister',
+            style: GoogleFonts.montserrat(
+              color: Colors.white54,
+              fontSize: 23,
+              fontWeight: FontWeight.bold,
+            ),
           ),
+          centerTitle: true,
+          leading: const CircleAvatar(
+            backgroundImage: AssetImage('assets/abdul.png'),
+          ),
+          elevation: 0.0,
         ),
-        centerTitle: true,
-        leading: const CircleAvatar(
-          backgroundImage: AssetImage('assets/abdul.png'),
-        ),
-        elevation: 0.0,
-      ),
-      body: Container(
-        alignment: const Alignment(0, 0.5),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            Image.asset(
-              'assets/coffe2.jpg',
-              height: 100,
-              width: 100,
-            ),
-            SizedBox(
-              height: 50,
-            ),
-            ElevatedButton(
-              style: buttonTheme,
-              onPressed: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => const HomePage()));
-              },
-              child: const Text(
-                'Enter',
+        body: Container(
+          alignment: const Alignment(0, 0.5),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Image.asset(
+                'assets/cofe.png',
+                height: 100,
+                width: 100,
               ),
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            TextButton(
-              style: buttonTheme2,
-              onPressed: () {
-                Navigator.pop(context);
-              },
-              child: Text(
-                'Exit',
-                style: GoogleFonts.montserrat(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w400,
+              SizedBox(
+                height: 50,
+              ),
+              ElevatedButton(
+                style: buttonTheme,
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const HomePage()));
+                },
+                child: const Text(
+                  'Enter',
                 ),
               ),
-            ),
-          ],
+              const SizedBox(
+                height: 35,
+              ),
+              TextButton(
+                style: buttonTheme2,
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: Text(
+                  'Exit',
+                  style: GoogleFonts.montserrat(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
