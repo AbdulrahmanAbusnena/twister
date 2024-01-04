@@ -38,12 +38,22 @@ class _RegistrationViewState extends State<RegistrationView> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Image.asset(
-                'assets/cofe.png',
-                height: 100,
-                width: 100,
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => HomePage(),
+                    ),
+                  );
+                },
+                child: Image.asset(
+                  'assets/cofe.png',
+                  height: 100,
+                  width: 100,
+                ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 50,
               ),
               ElevatedButton(

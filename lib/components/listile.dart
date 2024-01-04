@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Listile extends StatelessWidget {
   final Drinks drink;
@@ -9,10 +10,25 @@ class Listile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListTile(
-      title: Text(drink.name),
-      subtitle: Text(drink.price),
-      //   leading: ,
+    return Container(
+      width: 100,
+      decoration: BoxDecoration(
+        color: Colors.brown,
+      ),
+      child: ListTile(
+        title: Text(drink.name,
+            style: GoogleFonts.montserrat(
+              fontSize: 18,
+              fontWeight: FontWeight.w300,
+            )),
+        trailing: Text(drink.price,
+            style: GoogleFonts.montserrat(
+              color: Colors.black,
+              fontSize: 18,
+              fontWeight: FontWeight.normal,
+            )),
+        leading: Image.asset(drink.imagepath),
+      ),
     );
   }
 }

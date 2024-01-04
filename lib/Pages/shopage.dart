@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
+import 'package:twister/components/listile.dart';
 
 // what is the best keyboad to buy this two years I swear I can't
 class ShopPage extends StatefulWidget {
@@ -39,6 +40,7 @@ class _ShopPageState extends State<ShopPage> {
               itemCount: value.shop.length,
               itemBuilder: (context, index) {
                 Drinks individualDrink = value.shop[index];
+                return Listile(drink: individualDrink);
               },
             ),
           ),
