@@ -11,17 +11,18 @@ class Listile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 100,
+      //  width: 100,
       decoration: BoxDecoration(
-        color: Colors.brown,
+        borderRadius: BorderRadius.circular(8),
+        color: Colors.brown[300],
       ),
       child: ListTile(
         title: Text(drink.name,
             style: GoogleFonts.montserrat(
               fontSize: 18,
-              fontWeight: FontWeight.w300,
+              fontWeight: FontWeight.normal,
             )),
-        trailing: Text(drink.price,
+        subtitle: Text(drink.price,
             style: GoogleFonts.montserrat(
               color: Colors.black,
               fontSize: 18,

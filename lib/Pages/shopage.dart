@@ -34,17 +34,20 @@ class _ShopPageState extends State<ShopPage> {
           centerTitle: true,
           elevation: 0.0,
         ),
-        body: Column(children: [
-          Expanded(
-            child: ListView.builder(
-              itemCount: value.shop.length,
-              itemBuilder: (context, index) {
-                Drinks individualDrink = value.shop[index];
-                return Listile(drink: individualDrink);
-              },
+        body: Padding(
+          padding: const EdgeInsets.all(25.0),
+          child: Column(children: [
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.shop.length,
+                itemBuilder: (context, index) {
+                  Drinks individualDrink = value.shop[index];
+                  return Listile(drink: individualDrink);
+                },
+              ),
             ),
-          ),
-        ]),
+          ]),
+        ),
       ),
     );
   }
