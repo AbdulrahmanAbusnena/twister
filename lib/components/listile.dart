@@ -5,30 +5,35 @@ import 'package:google_fonts/google_fonts.dart';
 
 class Listile extends StatelessWidget {
   final Drinks drink;
+  void Function()? onTap;
 
-  const Listile({super.key, required this.drink});
+  Listile({super.key, required this.drink, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      //  width: 100,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(8),
-        color: Colors.brown[300],
-      ),
-      child: ListTile(
-        title: Text(drink.name,
-            style: GoogleFonts.montserrat(
-              fontSize: 18,
-              fontWeight: FontWeight.normal,
-            )),
-        subtitle: Text(drink.price,
-            style: GoogleFonts.montserrat(
-              color: Colors.black,
-              fontSize: 18,
-              fontWeight: FontWeight.normal,
-            )),
-        leading: Image.asset(drink.imagepath),
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        //  width: 100,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(8),
+          color: Colors.brown[300],
+        ),
+        child: ListTile(
+          title: Text(drink.name,
+              style: GoogleFonts.montserrat(
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              )),
+          subtitle: Text(drink.price,
+              style: GoogleFonts.montserrat(
+                color: Colors.black,
+                fontSize: 18,
+                fontWeight: FontWeight.normal,
+              )),
+          leading: Image.asset(drink.imagepath),
+          trailing: Icon(Icons.arrow_forward),
+        ),
       ),
     );
   }

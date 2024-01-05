@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:twister/Pages/orderpage.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
 import 'package:twister/components/listile.dart';
@@ -15,6 +16,10 @@ class ShopPage extends StatefulWidget {
 
 class _ShopPageState extends State<ShopPage> {
   //  list of the ListView
+  getOrderPage(Drinks drink) {
+    Navigator.push(context,
+        MaterialPageRoute(builder: (context) => OrderPage(drink: drink)));
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -42,7 +47,10 @@ class _ShopPageState extends State<ShopPage> {
                 itemCount: value.shop.length,
                 itemBuilder: (context, index) {
                   Drinks individualDrink = value.shop[index];
-                  return Listile(drink: individualDrink);
+                  return Listile(
+                    drink: individualDrink,
+                    onTap: getOrderPage(individualDrink),
+                  );
                 },
               ),
             ),

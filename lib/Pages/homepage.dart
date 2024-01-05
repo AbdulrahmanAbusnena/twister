@@ -3,7 +3,7 @@ import 'package:twister/Pages/cartpage.dart';
 import 'package:twister/Pages/shopage.dart';
 //import 'package:twister/Designs/themes.dart';
 //import 'package:twister/Pages/homepage.dart';
-import 'package:twister/components/gnev.dart';
+import 'package:twister/components/navbar.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
