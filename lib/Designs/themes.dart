@@ -18,3 +18,13 @@ final buttonTheme2 = TextButton.styleFrom(
   elevation: 0.0,
   foregroundColor: Colors.grey,
 );
+
+final buttonTheme3 = ElevatedButton.styleFrom(
+  minimumSize: const Size(
+    170,
+    40,
+  ),
+  elevation: 0.0,
+  foregroundColor: Colors.white70,
+  backgroundColor: Colors.brown,
+);

@@ -31,7 +31,7 @@ class _ShopPageState extends State<ShopPage> {
           title: Text(
             "Shop",
             style: GoogleFonts.montserrat(
-              fontSize: 14,
+              fontSize: 25,
               fontWeight: FontWeight.w900,
               color: Colors.white54,
             ),
@@ -40,7 +40,7 @@ class _ShopPageState extends State<ShopPage> {
           elevation: 0.0,
         ),
         body: Padding(
-          padding: const EdgeInsets.all(25.0),
+          padding: const EdgeInsets.all(10.0),
           child: Column(children: [
             Expanded(
               child: ListView.builder(
@@ -49,7 +49,43 @@ class _ShopPageState extends State<ShopPage> {
                   Drinks individualDrink = value.shop[index];
                   return Listile(
                     drink: individualDrink,
-                    onTap: getOrderPage(individualDrink),
+                    onTap: () => getOrderPage(individualDrink),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.shop.length,
+                itemBuilder: (context, index) {
+                  Drinks individualDrink = value.shop[index];
+                  return Listile(
+                    drink: individualDrink,
+                    onTap: () => getOrderPage(individualDrink),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.shop.length,
+                itemBuilder: (context, index) {
+                  Drinks individualDrink = value.shop[index];
+                  return Listile(
+                    drink: individualDrink,
+                    onTap: () => getOrderPage(individualDrink),
+                  );
+                },
+              ),
+            ),
+            Expanded(
+              child: ListView.builder(
+                itemCount: value.shop.length,
+                itemBuilder: (context, index) {
+                  Drinks individualDrink = value.shop[index];
+                  return Listile(
+                    drink: individualDrink,
+                    onTap: () => getOrderPage(individualDrink),
                   );
                 },
               ),
