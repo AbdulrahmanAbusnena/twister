@@ -23,7 +23,9 @@ class _MainState extends State<Main> {
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Twister',
-        theme: ThemeData(),
+        theme: ThemeData(
+          primarySwatch: Colors.brown,
+        ),
         home: const RegistrationView(),
       ),
       create: (context) => CoffeShop(),

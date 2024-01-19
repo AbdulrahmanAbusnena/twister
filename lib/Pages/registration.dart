@@ -43,7 +43,7 @@ class _RegistrationViewState extends State<RegistrationView> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => HomePage(),
+                      builder: (context) => const HomePage(),
                     ),
                   );
                 },

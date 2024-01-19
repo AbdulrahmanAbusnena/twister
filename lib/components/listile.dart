@@ -1,13 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:twister/modules/drinks.dart';
-import 'package:twister/modules/shop.dart';
+// import 'package:twister/modules/shop.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class Listile extends StatelessWidget {
   final Drinks drink;
   void Function()? onTap;
 
-  Listile({super.key, required this.drink, required this.onTap});
+  Listile({
+    super.key,
+    required this.drink,
+    required this.onTap,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +37,7 @@ class Listile extends StatelessWidget {
                 fontWeight: FontWeight.normal,
               )),
           leading: Image.asset(drink.imagepath),
-          trailing: Icon(Icons.arrow_forward),
+          trailing: const Icon(Icons.arrow_forward),
         ),
       ),
     );

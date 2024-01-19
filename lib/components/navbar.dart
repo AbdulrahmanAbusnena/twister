@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
-import 'package:gap/gap.dart';
+// import 'package:gap/gap.dart';
 
 // ignore: must_be_immutable
 class NavBar extends StatelessWidget {
@@ -17,14 +17,14 @@ class NavBar extends StatelessWidget {
       color: Colors.white54,
       tabActiveBorder: Border.all(color: Colors.white54, width: 2),
       //  gap: 8,
-      backgroundColor: Color.fromARGB(255, 141, 110, 99),
+      backgroundColor: const Color.fromARGB(255, 141, 110, 99),
       iconSize: 25,
 
       tabs: const [
         // Home
         GButton(
           icon: Icons.home_filled,
-          text: 'Home',
+          text: 'Shop',
         ),
         // cart
         GButton(
