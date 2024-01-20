@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:twister/Designs/themes.dart';
 import 'package:twister/Pages/cartpage.dart';
+import 'package:twister/components/drawer.dart';
 import 'package:twister/modules/drinks.dart';
+import 'package:twister/modules/shop.dart';
+import 'package:provider/provider.dart';
 
 class OrderPage extends StatefulWidget {
   final Drinks drink;
@@ -27,6 +30,17 @@ class _OrderPageState extends State<OrderPage> {
     setState(() {
       size = newValue1;
     });
+  }
+
+  void addToCart() {
+    Provider.of<CoffeShop>(context, listen: false).addTocart(widget.drink);
+
+    Navigator.pop(context);
+    showDialog(
+        context: context,
+        builder: ((context) => const AlertDialog(
+              title: Text('Succefully added to cart'),
+            )));
   }
 
   @override
@@ -111,17 +125,13 @@ class _OrderPageState extends State<OrderPage> {
             ),
             ElevatedButton(
               style: buttonTheme3,
-              onPressed: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const CartPage()),
-                );
-              },
-              child: const Text('Pay'),
+              onPressed: addToCart,
+              child: const Text('Add to cart'),
             ),
           ],
         ),
       ),
+      drawer: const MyDrawer(),
     );
   }
 }

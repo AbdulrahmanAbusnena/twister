@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:twister/Pages/orderpage.dart';
+import 'package:twister/components/drawer.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
 import 'package:twister/components/listile.dart';
@@ -16,14 +17,14 @@ class ShopPage extends StatefulWidget {
 
 class _ShopPageState extends State<ShopPage> {
   //  list of the ListView
-  getOrderPage(Drinks drink) { 
+  getOrderPage(Drinks drink) {
     Navigator.push(context,
         MaterialPageRoute(builder: (context) => OrderPage(drink: drink)));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<CoffeShop>( 
+    return Consumer<CoffeShop>(
       builder: (context, value, child) => Scaffold(
         backgroundColor: Colors.brown[400],
         appBar: AppBar(
@@ -92,6 +93,7 @@ class _ShopPageState extends State<ShopPage> {
             ),
           ]),
         ),
+        drawer: const MyDrawer(),
       ),
     );
   }
