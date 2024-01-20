@@ -16,14 +16,14 @@ class ShopPage extends StatefulWidget {
 
 class _ShopPageState extends State<ShopPage> {
   //  list of the ListView
-  getOrderPage(Drinks drink) {
+  getOrderPage(Drinks drink) { 
     Navigator.push(context,
         MaterialPageRoute(builder: (context) => OrderPage(drink: drink)));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<CoffeShop>(
+    return Consumer<CoffeShop>( 
       builder: (context, value, child) => Scaffold(
         backgroundColor: Colors.brown[400],
         appBar: AppBar(
