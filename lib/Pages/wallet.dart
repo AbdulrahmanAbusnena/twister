@@ -14,16 +14,16 @@ class Wallet extends StatelessWidget {
         backgroundColor: Colors.brown,
         elevation: 0.0,
       ),
-      body: Container(
+      body: Container(  
         width: 100,
-        height: 100,
-        color: Colors.brown,
+        height: 100, 
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           color: Colors.brown[300],
         ),
         child: Column(
-          children: [
+
+          children: [  
             const Icon(Icons.account_balance_wallet, color: Colors.blueGrey),
             Text("£245.99",
                 style: GoogleFonts.montserrat(

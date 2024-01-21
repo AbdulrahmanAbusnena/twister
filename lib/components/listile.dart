@@ -28,16 +28,16 @@ class Listile extends StatelessWidget {
           title: Text(drink.name,
               style: GoogleFonts.montserrat(
                 fontSize: 18,
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w700,
               )),
           subtitle: Text(drink.price,
               style: GoogleFonts.montserrat(
                 color: Colors.black,
                 fontSize: 18,
-                fontWeight: FontWeight.normal,
+                fontWeight: FontWeight.w700,
               )),
           leading: Image.asset(drink.imagepath),
-          trailing: const Icon(Icons.arrow_forward),
+          trailing: const Icon(Icons.arrow_forward),    
         ),
       ),
     );

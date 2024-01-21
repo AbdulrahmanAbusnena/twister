@@ -6,8 +6,17 @@ import 'package:twister/components/listile_cart.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
 
-class CartPage extends StatelessWidget {
+class CartPage extends StatefulWidget {
   const CartPage({super.key});
+
+  @override
+  State<CartPage> createState() => _CartPageState();
+}
+
+class _CartPageState extends State<CartPage> {
+  void removeFromCart(Drinks drink) {
+    Provider.of<CoffeShop>(context, listen: false).removeDrinkfromCart(drink);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -29,14 +38,19 @@ class CartPage extends StatelessWidget {
         ),
         body: Expanded(
           child: ListView.builder(
-              itemCount: value.shop.length,
+              itemCount: value.cart.length,   
               itemBuilder: (context, index) {
-                Drinks individualDrink = value.shop[index];
-                return const Padding(
-                  padding: EdgeInsets.all(10),
-                  //       child: Listile2(drink: individualDrink , ),
-                );
+                Drinks drink = value.cart[index];
+                return Padding(
+                  padding: const EdgeInsets.all(10),
+                  child: Listile2(
+                    drink: drink,
+                    onTap: () => removeFromCart(drink), 
+                    
+                  ),
+                );  
               }),
+
         ),
         drawer: const MyDrawer(),
       );

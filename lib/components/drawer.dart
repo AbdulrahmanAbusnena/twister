@@ -7,12 +7,16 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.brown[400], 
+
       child: ListView(
         children: [
           DrawerHeader(
-            child: Image.asset('asset/cofe.png'),
+            child: Image.asset('assets/cofe.png'),
+            
           ),
-          ListTile(
+          ListTile( 
+
             title: const Text('Home'),
             trailing: const Icon(Icons.arrow_forward_rounded),
             hoverColor: Colors.blueGrey,
