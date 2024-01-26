@@ -38,19 +38,17 @@ class _CartPageState extends State<CartPage> {
         ),
         body: Expanded(
           child: ListView.builder(
-              itemCount: value.cart.length,   
+              itemCount: value.cart.length,
               itemBuilder: (context, index) {
                 Drinks drink = value.cart[index];
                 return Padding(
                   padding: const EdgeInsets.all(10),
                   child: Listile2(
                     drink: drink,
-                    onTap: () => removeFromCart(drink), 
-                    
+                    onTap: () => removeFromCart(drink),
                   ),
-                );  
+                );
               }),
-
         ),
         drawer: const MyDrawer(),
       );
