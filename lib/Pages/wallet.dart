@@ -14,24 +14,28 @@ class Wallet extends StatelessWidget {
         backgroundColor: Colors.brown,
         elevation: 0.0,
       ),
-      body: Container(  
-        width: 100,
-        height: 100, 
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
-          color: Colors.brown[300],
-        ),
-        child: Column(
-
-          children: [  
-            const Icon(Icons.account_balance_wallet, color: Colors.blueGrey),
-            Text("£245.99",
-                style: GoogleFonts.montserrat(
-                  fontSize: 14,
-                  fontWeight: FontWeight.w700,
-                )),
-          ],
-        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Container(
+            width: 250,
+            height: 250,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(25),
+              color: Colors.brown[300],
+            ),
+            child: Column(
+              children: [
+                const Icon(Icons.account_balance_wallet, color: Colors.brown),
+                Text("£245.99",
+                    style: GoogleFonts.montserrat(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w700,
+                    )),
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
