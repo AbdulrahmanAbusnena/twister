@@ -4,7 +4,11 @@ import 'package:twister/modules/drinks.dart';
 class CoffeShop extends ChangeNotifier {
 // list of drinks for sale
   final List<Drinks> _shop = [
-    Drinks(name: 'Caffe latte', price: '2', imagepath: 'assets/cofe.png'),
+    Drinks(
+      name: 'Caffe latte',
+      price: '2',
+      imagepath: 'assets/cofe.png',
+    ),
   ];
 // list of dtinks in users cart
   final List<Drinks> _usercart = [];
@@ -27,7 +31,11 @@ class CoffeShop extends ChangeNotifier {
 
 class MilkShake extends ChangeNotifier {
   final List<Drinks> _shop1 = [
-    Drinks(name: 'MilkShake', price: '£2.50', imagepath: 'asset/cofe.png'),
+    Drinks(
+      name: 'MilkShake',
+      price: '£2.50',
+      imagepath: 'asset/cofe.png',
+    ),
   ];
   final List<Drinks> _usercart1 = [];
   List<Drinks> get shop => _shop1;
