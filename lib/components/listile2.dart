@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:twister/modules/drinks.dart';
-import 'package:twister/modules/shop.dart'; 
 
 class ListTile2 extends StatefulWidget {
   const ListTile2({super.key , required this.drinks});

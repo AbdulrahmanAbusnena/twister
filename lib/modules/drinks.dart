@@ -5,5 +5,9 @@ class Drinks {
   final String price;
   final String imagepath;
 
-  Drinks({required this.name, required this.price, required this.imagepath});
+  Drinks({
+    required this.name,
+    required this.price,
+    required this.imagepath,
+  });
 }

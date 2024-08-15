@@ -37,7 +37,7 @@ class Listile extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               )),
           leading: Image.asset(drink.imagepath),
-          trailing: const Icon(Icons.arrow_forward),    
+          trailing: const Icon(Icons.arrow_forward),
         ),
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:twister/Designs/themes.dart';
-import 'package:twister/Pages/cartpage.dart';
 import 'package:twister/components/drawer.dart';
 import 'package:twister/modules/drinks.dart';
 import 'package:twister/modules/shop.dart';
@@ -9,7 +8,7 @@ import 'package:provider/provider.dart';
 
 class OrderPage extends StatefulWidget {
   final Drinks drink;
-  OrderPage({super.key, required this.drink});
+  const OrderPage({super.key, required this.drink});
 
   @override
   State<OrderPage> createState() => _OrderPageState();
