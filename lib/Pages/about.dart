@@ -10,7 +10,7 @@ class AboutPage extends StatelessWidget {
           title: const Text('About - Twister'),
           centerTitle: true,
           leading: IconButton.filled(
-              onPressed: () {}, icon: Icon(Icons.arrow_back))),
+              onPressed: () {}, icon: const Icon(Icons.arrow_back))),
     );
   }
 }
