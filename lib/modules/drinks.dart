@@ -5,6 +5,8 @@ class Drinks {
   final String price;
   final String imagepath;
 // Requried
+//
+// required
   Drinks({
     required this.name,
     required this.price,
