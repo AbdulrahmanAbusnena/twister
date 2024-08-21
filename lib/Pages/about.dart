@@ -6,12 +6,12 @@ class AboutPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      //
       appBar: AppBar(
           title: const Text('About - Twister'),
           centerTitle: true,
           leading: IconButton.filled(
               onPressed: () {}, icon: const Icon(Icons.arrow_back))),
     );
-  }  
+  }
 }
-   
