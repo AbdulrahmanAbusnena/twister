@@ -10,7 +10,7 @@ import 'package:twister/components/drawer.dart';
 // listile
 import 'package:twister/components/listile_cart.dart';
 // modules
-import 'package:twister/modules/drinks.dart';
+import 'package:twister/modules/drinks.dart'; 
 import 'package:twister/modules/shop.dart';  
 
 class CartPage extends StatefulWidget {
