@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:twister/modules/drinks.dart';
 
 class CoffeShop extends ChangeNotifier {
-// list of drinks for sale
+// list of drinks for sales
   final List<Drinks> _shop = [
     Drinks(
       name: 'Caffe latte',
