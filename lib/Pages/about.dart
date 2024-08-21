@@ -12,6 +12,6 @@ class AboutPage extends StatelessWidget {
           leading: IconButton.filled(
               onPressed: () {}, icon: const Icon(Icons.arrow_back))),
     );
-  }
+  }  
 }
    
