@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+ import 'package:flutter/material.dart';
 // google fonts package
 import 'package:google_fonts/google_fonts.dart';
 // provider
@@ -11,7 +11,7 @@ import 'package:twister/components/drawer.dart';
 import 'package:twister/components/listile_cart.dart';
 // modules
 import 'package:twister/modules/drinks.dart'; 
-import 'package:twister/modules/shop.dart';  
+import 'package:twister/modules/shop.dart';     
 
 class CartPage extends StatefulWidget {
   const CartPage({super.key});
